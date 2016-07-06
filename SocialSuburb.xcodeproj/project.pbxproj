@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD43EA921D2D6205007ABE6E /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD43EA911D2D6205007ABE6E /* CloudKit.framework */; };
 		DDAF61E91D2599C0001A7B9C /* SearchableRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAF61E81D2599C0001A7B9C /* SearchableRecord.swift */; };
 		DDAF61EB1D2599D2001A7B9C /* CloudKitManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDAF61EA1D2599D2001A7B9C /* CloudKitManagedObject.swift */; };
 		DDF060591D246E5100D4244C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF060581D246E5100D4244C /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD43EA911D2D6205007ABE6E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		DDAF61E81D2599C0001A7B9C /* SearchableRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchableRecord.swift; sourceTree = "<group>"; };
 		DDAF61EA1D2599D2001A7B9C /* CloudKitManagedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloudKitManagedObject.swift; sourceTree = "<group>"; };
 		DDF060551D246E5100D4244C /* SocialSuburb.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SocialSuburb.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +54,7 @@
 		DDF060851D247ED700D4244C /* ThreadListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadListTableViewController.swift; path = SocialSuburb/ThreadListTableViewController.swift; sourceTree = "<group>"; };
 		DDF060871D247F0600D4244C /* ThreadDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThreadDetailTableViewController.swift; path = SocialSuburb/ThreadDetailTableViewController.swift; sourceTree = "<group>"; };
 		DDF060891D2484F700D4244C /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FirstViewController.swift; path = SocialSuburb/FirstViewController.swift; sourceTree = "<group>"; };
+		DDFE0E411D26E97E0063250B /* SocialSuburb.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = SocialSuburb.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +62,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD43EA921D2D6205007ABE6E /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD43EA931D2D7495007ABE6E /* CoreData / MSB */ = {
+			isa = PBXGroup;
+			children = (
+				DDF060721D246FD900D4244C /* Model.xcdatamodeld */,
+				DDF0605C1D246E5100D4244C /* Main.storyboard */,
+			);
+			name = "CoreData / MSB";
+			sourceTree = "<group>";
+		};
 		DDAF61E71D25999A001A7B9C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +90,7 @@
 		DDF0604C1D246E5100D4244C = {
 			isa = PBXGroup;
 			children = (
+				DD43EA911D2D6205007ABE6E /* CloudKit.framework */,
 				DDF0606B1D246E9400D4244C /* Models */,
 				DDF060751D2474DD00D4244C /* SyncableObject+CoreDataProperties.swift */,
 				DDF060761D2474DD00D4244C /* SyncableObject.swift */,
@@ -84,8 +98,8 @@
 				DDF060781D2474DD00D4244C /* Thread.swift */,
 				DDF060791D2474DD00D4244C /* Message+CoreDataProperties.swift */,
 				DDF0607A1D2474DD00D4244C /* Message.swift */,
-				DDF0606A1D246E6B00D4244C /* Controller */,
-				DDF060571D246E5100D4244C /* SocialSuburb */,
+				DDF0606C1D246E9F00D4244C /* ViewControllers */,
+				DD43EA931D2D7495007ABE6E /* CoreData / MSB */,
 				DDF060561D246E5100D4244C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,16 +115,14 @@
 		DDF060571D246E5100D4244C /* SocialSuburb */ = {
 			isa = PBXGroup;
 			children = (
-				DDF0605C1D246E5100D4244C /* Main.storyboard */,
+				DDFE0E411D26E97E0063250B /* SocialSuburb.entitlements */,
 				DDF060701D246F7300D4244C /* CloudKitManager.swift */,
-				DDF060721D246FD900D4244C /* Model.xcdatamodeld */,
 				DDF060581D246E5100D4244C /* AppDelegate.swift */,
 				DDF0606E1D246F3C00D4244C /* Stack.swift */,
 				DDF0605F1D246E5100D4244C /* Assets.xcassets */,
 				DDF060831D247C6600D4244C /* neighbordhood.png */,
 				DDF060611D246E5100D4244C /* LaunchScreen.storyboard */,
 				DDF060641D246E5100D4244C /* Info.plist */,
-				DDF0606C1D246E9F00D4244C /* ViewControllers */,
 				DDAF61E71D25999A001A7B9C /* Protocols */,
 				DDF0606D1D246F1D00D4244C /* OtherFiles */,
 			);
@@ -138,9 +150,10 @@
 				DDF060891D2484F700D4244C /* FirstViewController.swift */,
 				DDF060851D247ED700D4244C /* ThreadListTableViewController.swift */,
 				DDF060871D247F0600D4244C /* ThreadDetailTableViewController.swift */,
+				DDF0606A1D246E6B00D4244C /* Controller */,
+				DDF060571D246E5100D4244C /* SocialSuburb */,
 			);
 			name = ViewControllers;
-			path = ..;
 			sourceTree = "<group>";
 		};
 		DDF0606D1D246F1D00D4244C /* OtherFiles */ = {
@@ -182,6 +195,12 @@
 				TargetAttributes = {
 					DDF060541D246E5100D4244C = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = QGUMN7L9G3;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -250,6 +269,7 @@
 				DDF0605D1D246E5100D4244C /* Base */,
 			);
 			name = Main.storyboard;
+			path = SocialSuburb;
 			sourceTree = "<group>";
 		};
 		DDF060611D246E5100D4244C /* LaunchScreen.storyboard */ = {
@@ -350,6 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialSuburb/SocialSuburb.entitlements;
 				INFOPLIST_FILE = SocialSuburb/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PPahl.SocialSuburb;
@@ -361,6 +382,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SocialSuburb/SocialSuburb.entitlements;
 				INFOPLIST_FILE = SocialSuburb/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = PPahl.SocialSuburb;
@@ -398,8 +420,7 @@
 				DDF060731D246FD900D4244C /* Model.xcdatamodel */,
 			);
 			currentVersion = DDF060731D246FD900D4244C /* Model.xcdatamodel */;
-			name = Model.xcdatamodeld;
-			path = ../Model.xcdatamodeld;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
